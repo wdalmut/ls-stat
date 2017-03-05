@@ -1,0 +1,22 @@
+{
+  "name": "ls-stat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jasmine"
+  },
+  "author": "Walter Dal Mut <walter.dalmut@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3",
+    "mock-fs": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wdalmut/ls-stat.git"
+  }
+}
