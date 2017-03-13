@@ -16,15 +16,16 @@ module.exports = function(basepath) {
 
           return q.nfcall(fs.lstat, filename);
         });
-      }, q(false))
+      }, q())
       .then((lastStat) => {
         return q(
-          stats.filter((item) => item ? true : false)
-          .concat([lastStat])
-          .map((value, index) => {
-            value.filename = files[index];
-            return value;
-          })
+          stats
+            .concat([lastStat])
+            .filter((item) => item ? true : false)
+            .map((value, index) => {
+              value.filename = files[index];
+              return value;
+            })
         );
       });
   });

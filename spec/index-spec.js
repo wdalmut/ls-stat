@@ -40,4 +40,17 @@ describe("List", () => {
       done();
     });
   });
+
+  it("should reply with empty result set", (done) => {
+    mock({"/tmp": {}});
+
+    ls('/tmp').then((stats) => {
+      expect(stats)
+        .toEqual([]);
+      done();
+    }).fail((err) => {
+      fail(err);
+      done();
+    });
+  });
 });
